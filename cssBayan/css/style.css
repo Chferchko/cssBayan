@@ -30,7 +30,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  font-size: 100%;
+  font-size: 1.1em;
   line-height: 1;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -107,7 +107,7 @@ h6 {
 }
 
 .accordion__container {
-  max-width: 80%;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -118,7 +118,7 @@ h6 {
 
 .accordion__title {
   flex: 1 1 100%;
-  font-size: 2em;
+  font-size: 1.5em;
   padding: 1em 0;
   color: white;
   transition: color 0.3s;
@@ -137,6 +137,10 @@ h6 {
   border-top: none;
 }
 
+.accordion__item-input {
+  display: none;
+}
+
 .accordion__item-body {
   display: flex;
   justify-content: space-between;
@@ -151,7 +155,6 @@ h6 {
   transition: 0.3s;
 }
 
-/* icon ---------------------------------- */
 .accordion__item-icon {
   display: inline-block;
   transition: opacity 0.3s, transform 0.3s;
@@ -177,9 +180,9 @@ h6 {
   border-right: 0.1em solid greenyellow;
   transform: translate(-0.2em, -0.2em) rotate(-45deg);
 }
-/* icon ---------------------------------- */ 
 /* ITEM-BODY ---------------------------------- */
 
+/* ITEM-IMG ---------------------------------- */
 .accordion__item-img {
   text-align: center;
   height: 0;
@@ -192,16 +195,15 @@ h6 {
 }
 
 .accordion__item-img img {
+  max-width: 100%;
   height: 100%;
   border-radius: 5%;
   transition: transform 1s, box-shadow 0.3s, border 0.3s, outline 0.3s;
   transform: rotateX(90deg);
   transform-origin: top;
+  object-fit: cover;
 }
-
-.accordion__item-input {
-  display: none;
-}
+/* ITEM-IMG ---------------------------------- */
 /* ---------------------------------- Accordion item */
 
 /* ---------------------------------- Accordion fx */
@@ -380,3 +382,33 @@ h6 {
   }
 }
 /* ---------------------------------- Hover support */
+
+/* ---------------------------------- Breakpoints */
+/* ----- 1024px < ----- */
+@media (min-width: 1024px){
+  body {
+    font-size: 1.3em;
+  }
+  .accordion__container {
+    max-width: 80%;
+  }
+  .accordion__title {
+    font-size: 2em;
+  }
+}
+/* ----- > 576px ----- */
+@media (max-width: 576px){
+  .accordion__container {
+    font-size: 0.8em;
+  }
+  .accordion__title {
+    font-size: 1em;
+  }
+  .accordion__item-caption {
+    font-size: 1.2em;;
+  }
+  .accordion__item-img img {
+    object-fit: fill;
+  }
+}
+/* ---------------------------------- Breakpoints */
