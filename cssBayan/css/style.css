@@ -118,7 +118,7 @@ h6 {
 
 .accordion__title {
   flex: 1 1 100%;
-  font-size: 3em;
+  font-size: 2em;
   padding: 1em 0;
   color: white;
   transition: color 0.3s;
