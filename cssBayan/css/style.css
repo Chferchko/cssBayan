@@ -149,10 +149,13 @@ h6 {
 
 /* ITEM-BODY ---------------------------------- */
 .accordion__item-caption {
-  display: inline-block;
+  flex: 1 1 auto;
   text-transform: uppercase;
   font-size: 1em;
   transition: 0.3s;
+}
+.caption-decor {
+  transition: transform 0.3s, color 0.3s, text-shadow 0.3s;
 }
 
 .accordion__item-icon {
@@ -216,8 +219,15 @@ h6 {
 .accordion__item-input:checked
 ~ .accordion__item-body
   > .accordion__item-caption {
-  transform: scale(0.9);
-  text-shadow: 0.1em 0.1em 0.2em white;
+    transform: translateX(2em);
+    text-shadow: 0.1em 0.1em 0.2em white;
+}
+
+.accordion__item-input:checked
+~ .accordion__item-body
+  > .caption-decor {
+    transform: translateX(1.8em);
+    text-shadow: 0.03em 0.03em 0.1em white;
 }
 
 .accordion__item-input:checked 
@@ -304,6 +314,14 @@ h6 {
   > .accordion__item-caption {
   text-shadow: 0.1em -0.1em 0.2em greenyellow;
   color: greenyellow;
+}
+
+.accordion__item:active 
+.accordion__item-input:checked
+~ .accordion__item-body
+  > .caption-decor {
+    color: greenyellow;
+    text-shadow: 0.03em -0.03em 0.1em greenyellow;
 }
 
 .accordion__item:active
