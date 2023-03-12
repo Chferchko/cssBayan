@@ -116,3 +116,82 @@ h6 {
   cursor: pointer;
 }
 /* ---------------------------------- Accordion wrappers */
+
+/* ---------------------------------- Accordion item */
+.accordion__item {
+  flex: 1 1 100%;
+  border-top: 0.1rem solid greenyellow;
+  padding: 1em 0 2em;
+  cursor: pointer;
+  transition: border 0.3s;
+}
+.accordion__item:first-child {
+  border-top: none;
+}
+
+.accordion__item-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ITEM-BODY ---------------------------------- */
+.accordion__item-caption {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1em;
+  transition: 0.3s;
+}
+
+/* icon ---------------------------------- */
+.accordion__item-icon {
+  display: inline-block;
+  transition: opacity 0.3s, transform 0.3s;
+  font-size: 1em;
+  line-height: 1em;
+}
+
+.accordion__item-icon span {
+  display: block;
+  width: 1em;
+  height: 1em;
+  transition: transform 1s, border 0.3s;
+}
+
+.accordion__item-icon-top {
+  border-top: 0.1em solid greenyellow;
+  border-left: 0.1em solid greenyellow;
+  transform: translate(0.2em, 0.2em) rotate(-45deg);
+}
+
+.accordion__item-icon-bottom {
+  border-bottom: 0.1em solid greenyellow;
+  border-right: 0.1em solid greenyellow;
+  transform: translate(-0.2em, -0.2em) rotate(-45deg);
+}
+/* icon ---------------------------------- */ 
+/* ITEM-BODY ---------------------------------- */
+
+.accordion__item-img {
+  text-align: center;
+  height: 0;
+  width: 100%;
+  margin-top: 0em;
+  transition: 1s;
+  perspective: 40vh;
+  perspective-origin: top;
+  transform-style: preserve-3d;
+}
+
+.accordion__item-img img {
+  height: 100%;
+  border-radius: 5%;
+  transition: transform 1s, box-shadow 0.3s, border 0.3s, outline 0.3s;
+  transform: rotateX(90deg);
+  transform-origin: top;
+}
+
+.accordion__item-input {
+  display: none;
+}
+/* ---------------------------------- Accordion item */
