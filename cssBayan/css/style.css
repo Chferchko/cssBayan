@@ -392,9 +392,6 @@ h6 {
   .accordion__container {
     max-width: 80%;
   }
-  .accordion__title {
-    font-size: 2em;
-  }
 }
 /* ----- > 576px ----- */
 @media (max-width: 576px){
