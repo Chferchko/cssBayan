@@ -196,6 +196,137 @@ h6 {
 }
 /* ---------------------------------- Accordion item */
 
+/* ---------------------------------- Accordion fx */
+/* CHECKED ---------------------------------- */  
+.accordion__item-input:checked
+~ .accordion__item-body {
+  color: white;
+}
+
+.accordion__item-input:checked
+~ .accordion__item-body
+  > .accordion__item-caption {
+  font-weight: 400;
+  transform: scale(0.9);
+  text-shadow: 0.1em 0.1em 0.2em white;
+}
+
+.accordion__item-input:checked 
+~ .accordion__item-body 
+  > .accordion__item-icon {
+    transform: scale(0.75);
+}
+
+.accordion__item-input:checked
+~ .accordion__item-body
+  > .accordion__item-icon
+    > .accordion__item-icon-top,
+.accordion__item:hover
+  .accordion__item-icon-top {
+      transform: rotate(45deg) translate(0.2em, 0.2em);
+      border-top: 0.1em solid white;
+      border-left: 0.1em solid white;
+}
+
+.accordion__item-input:checked 
+~ .accordion__item-body 
+  > .accordion__item-icon
+    > .accordion__item-icon-bottom,
+.accordion__item:hover
+  .accordion__item-icon-bottom {
+      transform: rotate(45deg) translate(-0.2em, -0.2em);
+      border-bottom: 0.1em solid white;
+      border-right: 0.1em solid white;
+}
+
+.accordion__item-input:checked
+~ .accordion__item-img {
+  height: 40vh;
+  margin-top: 1em;
+}
+
+.accordion__item-input:checked
+~ .accordion__item-img
+  img {
+    transform: rotateX(0deg);
+    box-shadow: 0 0 0.8em white;
+}
+/* CHECKED ---------------------------------- */
+
+/* ACTIVE ---------------------------------- */
+.accordion__item:active
+  .accordion__item-body {
+  color: greenyellow;
+}
+
+.accordion__item:active
+  .accordion__item-caption {
+  text-shadow: 0.1em -0.1em 0.2em greenyellow;
+  transform: scale(1.05);
+  color: greenyellow;
+}
+
+.accordion__item:active
+  .accordion__item-icon-top {
+  border-top: 0.11em solid greenyellow;
+  border-left: 0.11em solid greenyellow;
+  transform: rotate(110deg) translate(0.2em, 0) scale(1.1);
+}
+
+.accordion__item:active
+  .accordion__item-icon-bottom {
+  border-bottom: 0.11em solid greenyellow;
+  border-right: 0.11em solid greenyellow;
+  transform: rotate(110deg) translate(-0.2em, 0) scale(1.1);
+}
+
+.accordion__item:active
+> .accordion__item-img
+    img {
+  box-shadow: 0 0 0.8em greenyellow;
+  transform: rotateX(0deg) scale(0.97);
+}
+/* ACTIVE ---------------------------------- */
+
+/* CHECKED-ACTIVE ---------------------------------- */
+.accordion__item:active 
+.accordion__item-input:checked
+~ .accordion__item-body
+  > .accordion__item-caption {
+  text-shadow: 0.1em -0.1em 0.2em greenyellow;
+  color: greenyellow;
+}
+
+.accordion__item:active
+  .accordion__item-input:checked
+  ~ .accordion__item-body
+    > .accordion__item-icon
+    > .accordion__item-icon-top {
+    border-top: 0.1em solid greenyellow;
+    border-left: 0.1em solid greenyellow;
+    transform: rotate(110deg) translate(0.2em, 0);
+}
+
+.accordion__item:active
+  .accordion__item-input:checked
+  ~ .accordion__item-body
+    > .accordion__item-icon
+    > .accordion__item-icon-bottom {
+    border-bottom: 0.1em solid greenyellow;
+    border-right: 0.1em solid greenyellow;
+    transform: rotate(110deg) translate(-0.2em, 0);
+}
+
+.accordion__item:active
+  .accordion__item-input:checked
+  ~ .accordion__item-img 
+    img {
+      box-shadow: 0 0 0.8em greenyellow;
+      transform: scale(1.05);
+}
+/* CHECKED-ACTIVE ---------------------------------- */
+/* ---------------------------------- Accordion fx */
+
 /* ---------------------------------- Hover support */
 @media (hover: hover) {
   /* HOVER container ---------------------------------- */
