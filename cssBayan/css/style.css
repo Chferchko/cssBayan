@@ -195,3 +195,42 @@ h6 {
   display: none;
 }
 /* ---------------------------------- Accordion item */
+
+/* ---------------------------------- Hover support */
+@media (hover: hover) {
+  /* HOVER container ---------------------------------- */
+  .accordion__container:hover 
+  .accordion__item-body {
+    color: white;
+  }
+  .accordion__container:hover
+  .accordion__item-icon {
+    opacity: 1;
+  }
+  /* HOVER container ---------------------------------- */
+  .accordion__item-body {
+    color: greenyellow;
+  }
+  .accordion__item-icon {
+    opacity: 0;
+  }
+  .accordion__item:hover
+  > .accordion__item-img {
+    height: 40vh;
+    margin-top: 1em;
+  }
+  .accordion__item:hover
+    > .accordion__item-img
+      img {
+      transform: rotateX(0deg);
+  }
+}
+@media (hover: none) {
+  .accordion__item-icon {
+    opacity: 1;
+  }
+  .accordion__item-body {
+    color: white;
+  }
+}
+/* ---------------------------------- Hover support */
