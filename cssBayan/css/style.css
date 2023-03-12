@@ -189,7 +189,7 @@ h6 {
   width: 100%;
   margin-top: 0em;
   transition: 1s;
-  perspective: 40vh;
+  perspective: 30rem;
   perspective-origin: top;
   transform-style: preserve-3d;
 }
@@ -216,7 +216,6 @@ h6 {
 .accordion__item-input:checked
 ~ .accordion__item-body
   > .accordion__item-caption {
-  font-weight: 400;
   transform: scale(0.9);
   text-shadow: 0.1em 0.1em 0.2em white;
 }
