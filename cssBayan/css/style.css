@@ -408,8 +408,11 @@ h6 {
   body {
     font-size: 1.3em;
   }
+}
+/* ----- 880px < ----- */
+@media (min-width: 880px){
   .accordion__container {
-    max-width: 80%;
+    max-width: 70%;
   }
 }
 /* ----- > 576px ----- */
