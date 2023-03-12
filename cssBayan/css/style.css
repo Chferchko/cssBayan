@@ -115,6 +115,14 @@ h6 {
   align-items: flex-start;
   cursor: pointer;
 }
+
+.accordion__title {
+  flex: 1 1 100%;
+  font-size: 3em;
+  padding: 1em 0;
+  color: white;
+  transition: color 0.3s;
+}
 /* ---------------------------------- Accordion wrappers */
 
 /* ---------------------------------- Accordion item */
@@ -331,6 +339,10 @@ h6 {
 @media (hover: hover) {
   /* HOVER container ---------------------------------- */
   .accordion__container:hover 
+  .accordion__title {
+    color: greenyellow;
+  }
+  .accordion__container:hover 
   .accordion__item-body {
     color: white;
   }
@@ -357,6 +369,9 @@ h6 {
   }
 }
 @media (hover: none) {
+  .accordion__title {
+    color: greenyellow;
+  }
   .accordion__item-icon {
     opacity: 1;
   }
