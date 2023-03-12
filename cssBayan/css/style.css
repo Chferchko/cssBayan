@@ -169,7 +169,7 @@ h6 {
   display: block;
   width: 1em;
   height: 1em;
-  transition: transform 1s, border 0.3s;
+  transition: all 0.3s, transform 1s;
 }
 
 .accordion__item-icon-top {
@@ -245,6 +245,7 @@ h6 {
       transform: rotate(45deg) translate(0.2em, 0.2em);
       border-top: 0.1em solid white;
       border-left: 0.1em solid white;
+      box-shadow: 0 0 0.5em white;
 }
 
 .accordion__item-input:checked 
@@ -256,6 +257,7 @@ h6 {
       transform: rotate(45deg) translate(-0.2em, -0.2em);
       border-bottom: 0.1em solid white;
       border-right: 0.1em solid white;
+      box-shadow: 0 0 0.5em white;
 }
 
 .accordion__item-input:checked
@@ -287,15 +289,15 @@ h6 {
 
 .accordion__item:active
   .accordion__item-icon-top {
-  border-top: 0.11em solid greenyellow;
-  border-left: 0.11em solid greenyellow;
+  border-top: 0.1em solid greenyellow;
+  border-left: 0.1em solid greenyellow;
   transform: rotate(110deg) translate(0.2em, 0) scale(1.1);
 }
 
 .accordion__item:active
   .accordion__item-icon-bottom {
-  border-bottom: 0.11em solid greenyellow;
-  border-right: 0.11em solid greenyellow;
+  border-bottom: 0.1em solid greenyellow;
+  border-right: 0.1em solid greenyellow;
   transform: rotate(110deg) translate(-0.2em, 0) scale(1.1);
 }
 
