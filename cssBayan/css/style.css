@@ -36,6 +36,7 @@ body {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font-family: "Roboto+Mono";
+  background-color: #303030;
 }
 
 input,
@@ -89,15 +90,7 @@ h6 {
 .wrapper,
 .accordion {
   height: 100%;
-}
-
-.wrapper,
-.accordion {
   width: 100%;
-}
-
-.wrapper {
-  background-color: #303030;
 }
 
 .accordion {
